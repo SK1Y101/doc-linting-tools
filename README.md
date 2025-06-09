@@ -31,7 +31,7 @@ All tools can be run individually or combined using the master script:
 | `dc-proselint`                         | Wrapper for `proselint`; skips code blocks                     |
 | `dc-style`                             | Wrapper for `style`; checks Flesch score and passive voice     |
 | `install-deps.sh`                      | Installs all required tools via `apt`                          |
-| `plist.aws`                            | Aspell personal dictionary (must be paired with a `.per` file) |
+| `plist.aws`                            | Aspell personal dictionary (must be paired with a `.pws` file) |
 | `avail-tools`                          | Survey of linter tools evaluated for this project              |
 | `emojis.org`                           | Emoji references for terminal output formatting                |
 | `sampledoc`, `sampledoc.md`, `testdoc` | Test documents of varying complexity                           |
@@ -85,7 +85,7 @@ This installs:
 * `pandoc`
 * `linkchecker`
 
-> ⚠️ You must still provide a properly formatted personal dictionary for `aspell`, named `plist.per`, placed in your `$HOME` directory. See `man aspell` for format details.
+> ⚠️ You must still provide a properly formatted personal dictionary for `aspell`, named `plist.pws`, placed in your `$HOME` directory. See `man aspell` for format details.
 
 ---
 
@@ -117,7 +117,7 @@ The script stops on the first failure (`set -e`), so you can focus on one issue 
 
 ## 🛠️ Known Caveats
 
-1. **`aspell`** requires a properly formatted `.per` file (not just `.aws`) or it will silently fail.
+1. **`aspell`** requires a properly formatted `.pws` file (not just `.aws`) or it will silently fail.
 2. **`style`** reports only two thresholds:
 
    * Flesch score: must be > 64
@@ -129,9 +129,9 @@ The script stops on the first failure (`set -e`), so you can focus on one issue 
 
 ## 🧪 TODOs and Future Improvements
 
-* [ ] Add a default `plist.per` for MAAS documentation use
+* [ ] Add a default `plist.pws` for MAAS documentation use
 * [ ] Bundle `install-deps.sh` into a single `make install` workflow
-* [ ] Auto-place `plist.per` in `$HOME` during install
+* [ ] Auto-place `plist.pws` in `$HOME` during install
 
 Feel free to contribute these — or anything else that would make this repo more robust. PRs are always welcome.
 

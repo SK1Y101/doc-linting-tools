@@ -20,6 +20,6 @@ for pkg in "${packages[@]}"; do
   fi
 done
 
-sudo cp plist.per /usr/lib/aspell
+sudo cp plist.pws /usr/lib/aspell
 
 echo "🎉 All required packages are ready!"

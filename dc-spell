@@ -15,7 +15,7 @@ cleaned=$(awk '
 ' "$file")
 
 # Run aspell on the cleaned text
-echo "$cleaned" | aspell -p plist.per list | sort -u | tee /tmp/misspelled.txt | grep -q .
+echo "$cleaned" | aspell -p plist.pws list | sort -u | tee /tmp/misspelled.txt | grep -q .
 
 # Report results
 if grep -q . /tmp/misspelled.txt; then
